@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contenedorDelcontenedor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
+    tools:context=".MenuPrincipalFragmento">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/contenedor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/rounded_corners"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ExtraText">
+
+
+        <TextView
+            android:id="@+id/textview_first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selecciona cualquier opción"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/v_left"
+            app:layout_constraintTop_toTopOf="@+id/h_top"
+            tools:ignore="HardcodedText" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/outsidecamaracontainer"
+            android:layout_width="174sp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="4dp"
+            android:foreground="@drawable/inverse_rounded_corners"
+            app:layout_constraintBottom_toTopOf="@+id/h_row2"
+            app:layout_constraintEnd_toStartOf="@+id/v_middle"
+            app:layout_constraintStart_toStartOf="@+id/v_left"
+            app:layout_constraintTop_toTopOf="@+id/h_row0">
+
+            <androidx.camera.view.PreviewView
+                android:id="@+id/camaracontainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="0dp"
+                app:layout_constraintBottom_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/unlock_button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginBottom="5dp"
+            app:cornerRadius="25dp"
+            app:icon="@drawable/ic_launcher_foreground"
+            app:iconPadding="0dp"
+            app:iconSize="100dp"
+            android:backgroundTint="@color/material_dynamic_primary70"
+            android:text="@string/presione_el_bot_n_para_desbloquear_la_puerta"
+            android:textColor="@color/material_dynamic_primary99"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            app:iconTint="@color/material_dynamic_primary99"
+            app:layout_constraintBottom_toTopOf="@+id/h_row3"
+            app:layout_constraintEnd_toStartOf="@+id/v_right"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/h_row2"
+            app:rippleColor="@color/material_dynamic_primary50"
+            tools:ignore="TextContrastCheck" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/wrupic_container"
+            android:layout_width="174sp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="4dp"
+            android:foreground="@drawable/inverse_rounded_corners"
+            app:layout_constraintBottom_toTopOf="@+id/whoareyou_button"
+            app:layout_constraintEnd_toStartOf="@+id/v_right"
+            app:layout_constraintStart_toStartOf="@+id/v_middle"
+            app:layout_constraintTop_toTopOf="@+id/outsidecamaracontainer">
+
+            <ImageView
+                android:id="@+id/whoareyou_pic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorSurface"
+                android:clickable="true"
+                android:foregroundGravity="fill"
+                android:scaleType="centerCrop"
+                android:scaleX="2.34"
+                android:scaleY="2.34"
+                android:tintMode="multiply"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/no_cara_seleccionada"
+                app:tint="?attr/colorSecondary" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <Button
+            android:id="@+id/whoareyou_button"
+            style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginBottom="7dp"
+            android:backgroundTint="@color/material_dynamic_primary50"
+            android:clickable="true"
+            android:text="Sin cara elegida"
+            android:textColor="@color/material_dynamic_primary99"
+            android:textSize="15sp"
+            app:cornerRadius="25dp"
+            app:icon="@drawable/who_r_u"
+            app:iconGravity="start"
+            app:iconPadding="0dp"
+            app:iconSize="30dp"
+            app:iconTint="@color/material_dynamic_primary99"
+            app:layout_constraintBottom_toTopOf="@+id/h_row2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/v_right"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/outsidecamaracontainer"
+            app:layout_constraintStart_toStartOf="@+id/v_middle"
+            app:rippleColor="@color/material_dynamic_primary30"
+            tools:ignore="HardcodedText,TextContrastCheck" />
+
+
+        <Button
+            android:id="@+id/addnewface_button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginBottom="5dp"
+            android:backgroundTint="@color/material_dynamic_primary50"
+            android:text="@string/addnewface"
+            android:textColor="@color/material_dynamic_primary99"
+            android:textColorHighlight="@color/material_dynamic_primary99"
+            android:textColorHint="@color/material_dynamic_primary20"
+            android:textColorLink="@color/material_dynamic_primary30"
+            android:textSize="15sp"
+            app:cornerRadius="25dp"
+            app:icon="@drawable/dibujo_anyadircara"
+            app:iconGravity="top"
+            app:iconPadding="0dp"
+            app:iconSize="90dp"
+            app:iconTint="@color/material_dynamic_primary99"
+            app:layout_constraintBottom_toTopOf="@+id/h_bottom"
+            app:layout_constraintEnd_toStartOf="@+id/v_middle"
+            app:layout_constraintHorizontal_bias="0.761"
+            app:layout_constraintStart_toStartOf="@+id/v_left"
+            app:layout_constraintTop_toTopOf="@+id/h_row3"
+            app:rippleColor="@color/material_dynamic_primary30"
+            tools:ignore="TextContrastCheck" />
+
+        <Button
+            android:id="@+id/deleteface_button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginBottom="5dp"
+            android:backgroundTint="@color/material_dynamic_primary50"
+            android:text="@string/deleteface"
+            android:textColor="@color/material_dynamic_primary99"
+            android:textColorHighlight="@color/material_dynamic_primary99"
+            android:textColorHint="@color/material_dynamic_primary20"
+            android:textColorLink="@color/material_dynamic_primary30"
+            android:textSize="15sp"
+            app:cornerRadius="25dp"
+            app:icon="@drawable/dibujo_eliminarcara"
+            app:iconGravity="top"
+            app:iconPadding="0dp"
+            app:iconSize="90dp"
+            app:iconTint="@color/material_dynamic_primary99"
+            app:layout_constraintBottom_toTopOf="@+id/h_bottom"
+            app:layout_constraintEnd_toStartOf="@+id/v_right"
+            app:layout_constraintStart_toStartOf="@+id/v_middle"
+            app:layout_constraintTop_toTopOf="@+id/h_row3"
+            app:rippleColor="@color/material_dynamic_primary30"
+            tools:ignore="TextContrastCheck" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/h_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.013237064" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/v_middle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/v_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/v_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/h_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.9867629" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/h_row0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.06565944" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/h_row2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5051746" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/h_row3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.69990375" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

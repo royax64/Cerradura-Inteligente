@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-->En este xml se establecen el diseño de cada elemento para la introducción (funciona como una rara combinación de html y css)<-->
+<!-->En el atributo android:id se declara el nombre de cada elemento. <-->
+<!-->No pongas atención al elemento "boton_invisible", ese lo tengo nomás para que no pierda el formato, lo puedes modificar/borrar si gustas.<-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentBottom="false"
+        android:layout_centerInParent="false"
+        android:layout_marginHorizontal="23dp"
+        android:layout_marginTop="120dp"
+        android:text="@string/app_name"
+        android:textAlignment="textStart"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/subtitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titulo"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="23dp"
+        android:text="xd"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:visibility="visible"
+        android:textSize="20sp"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/imagen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/boton_invisible"
+        android:layout_below="@+id/subtitulo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="81dp"
+        android:clickable="false"
+        android:contentDescription="Imagen1"
+        android:focusable="false"
+        android:padding="70dp"
+        android:scaleType="centerCrop"
+        android:theme="@style/Theme.CerraduraInteligente"
+        app:srcCompat="@drawable/step_2_figure"
+        app:tint="?attr/colorSecondary"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/boton_invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="120dp"
+        android:backgroundTint="@color/material_dynamic_primary50"
+        android:clickable="false"
+        android:text=""
+        android:textColor="@color/material_dynamic_primary99"
+        android:textColorHighlight="@color/material_dynamic_primary99"
+        android:textColorHint="@color/material_dynamic_primary20"
+        android:textColorLink="@color/material_dynamic_primary30"
+        android:visibility="invisible"
+        tools:ignore="TextContrastCheck" />
+
+
+</RelativeLayout>

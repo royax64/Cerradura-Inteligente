@@ -1,0 +1,23 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.CerraduraInteligente" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Color principal -->
+        <item name="colorPrimary">@color/material_dynamic_primary60</item>
+        <!-- Color del statusbar -->
+        <item name="android:statusBarColor">@color/material_dynamic_secondary95</item>
+        <!-- Color del fondo -->
+        <item name="colorSurface">@color/material_dynamic_secondary95</item>
+        <!-- Color de los iconos -->
+        <item name="colorSecondary">@color/material_dynamic_primary40</item>
+        <!-- Color del contenedor de los botones y de la barra de titulo-->
+        <item name="colorBackgroundFloating">@color/material_dynamic_secondary99</item>
+        <!-- Color del titulo en los pop-ups-->
+        <item name="colorOnSurface">@color/material_dynamic_primary20</item>
+        <!-- Color del fondo de los text inputs-->
+        <item name="colorPrimaryContainer">@color/material_dynamic_primary95</item>
+
+    </style>
+
+    <style name="Theme.CerraduraInteligente" parent="Base.Theme.CerraduraInteligente" />
+
+</resources>

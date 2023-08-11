@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
+    tools:context=".BloquearDesbloquearPuertaFragmento">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/rounded_corners"
+        android:padding="20dp">
+
+        <Button
+            android:id="@+id/aceptar_botton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:backgroundTint="@color/material_dynamic_primary50"
+            android:text="Presione aquí para bloquear la puerta"
+            android:textColor="@color/material_dynamic_primary100"
+            android:textColorHighlight="@color/material_dynamic_primary70"
+            android:textColorHint="@color/material_dynamic_primary10"
+            android:textColorLink="@color/material_dynamic_primary60"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:cornerRadius="25dp"
+            app:icon="@android:drawable/ic_lock_idle_lock"
+            app:iconPadding="0dp"
+            app:iconSize="40dp"
+            app:iconTint="@color/material_dynamic_primary99"
+            app:layout_constraintBottom_toTopOf="@+id/guideline3"
+            app:layout_constraintEnd_toStartOf="@+id/v_right"
+            app:layout_constraintStart_toStartOf="@+id/v_left"
+            app:layout_constraintTop_toTopOf="@+id/guideline2"
+            app:rippleColor="@color/material_dynamic_primary30" />
+
+        <TextView
+            android:id="@+id/First_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="La puerta se ha desbloqueado con éxito, presione el botón para bloquear nuevamente."
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="28sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imagen"
+            android:layout_width="218dp"
+            android:layout_height="297dp"
+            android:clickable="false"
+            android:contentDescription="Imagen1"
+            android:focusable="false"
+            android:padding="50dp"
+            android:scaleType="centerCrop"
+            android:theme="@style/Theme.CerraduraInteligente"
+            app:layout_constraintBottom_toTopOf="@+id/aceptar_botton"
+            app:layout_constraintEnd_toStartOf="@+id/imagen2"
+            app:layout_constraintStart_toStartOf="@+id/v_left"
+            app:layout_constraintTop_toBottomOf="@+id/First_text"
+            app:srcCompat="@drawable/puerta"
+            app:tint="?attr/colorSecondary"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:id="@+id/imagen2"
+            android:layout_width="144dp"
+            android:layout_height="253dp"
+            android:clickable="false"
+            android:contentDescription="Imagen1"
+            android:focusable="false"
+            android:padding="50dp"
+            android:scaleType="centerCrop"
+            android:theme="@style/Theme.CerraduraInteligente"
+            app:layout_constraintBottom_toTopOf="@+id/aceptar_botton"
+            app:layout_constraintEnd_toEndOf="@+id/v_right"
+            app:layout_constraintStart_toEndOf="@+id/imagen"
+            app:srcCompat="@drawable/who_r_u"
+            app:tint="?attr/colorSecondary"
+            tools:ignore="HardcodedText" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.70" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.9" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/v_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="0dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/v_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="0dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

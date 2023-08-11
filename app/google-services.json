@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "267464474938",
+    "firebase_url": "https://cerradura-inteligente-bc364-default-rtdb.europe-west1.firebasedatabase.app/",
+    "project_id": "cerradura-inteligente-bc364",
+    "storage_bucket": "cerradura-inteligente-bc364.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:267464474938:android:b32fcf2377921a62a85003",
+        "android_client_info": {
+          "package_name": "com.fusufum.cerradurainteligente"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "267464474938-e33tngi45rdd6nocd12m807lsulp7nn9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC07JnjzTYDRBl243kSnDX79KQX-CPmKkM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "267464474938-e33tngi45rdd6nocd12m807lsulp7nn9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

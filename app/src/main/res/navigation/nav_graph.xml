@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-->Aqui se declaran todos los fragmentos de la aplicación y se describe como interactuamos con cada una de ellas.<-->
+<!-->Para que no batallen pueden cambiar la navegación en el modo diseño en lugar del modo codigo<-->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/MenuPrincipal">
+    <!-->Comenzamos la app en MenuPrincipal<-->
+
+    <fragment
+        android:id="@+id/MenuPrincipal"
+        android:name="com.fusufum.cerradurainteligente.MenuPrincipalFragmento"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/menu_principal_estilo">
+
+        <!-->En android:id se declara el nombre del fragmento para usarse dentro del codigo<-->
+        <!-->En android:name se declara la clase que contiene el codigo de su fragmento<-->
+        <!-->En android:layout se declara el archivo .xml que contiene la vista de su fragmento<-->
+        <!-->En android:label se escribe el nombre de la pantalla que queramos que aparezca en la parte superior<-->
+
+        <action
+            android:id="@+id/action_menuprincipal_a_bloqueardesbloquear"
+            app:destination="@id/BloquearDesbloquearPuerta"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_menuprincipal_a_anyadircara"
+            app:destination="@id/AnyadirCara"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"/>
+
+
+        <!-->Ahora vamos a declarar las acciones para poder navegar en la app<-->
+        <!-->En android:id se declara el nombre de la acción para usarse dentro del codigo<-->
+        <!-->En app:destination escribimos el nombre del fragmento al que queremos ir (cada acción podra ser llamada en botones)<-->
+        <!-->En android:xxxxAnim se declaran las animaciones de transicion<-->
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/BloquearDesbloquearPuerta"
+        android:name="com.fusufum.cerradurainteligente.BloquearDesbloquearPuertaFragmento"
+        android:label="@string/unlock_fragment_label"
+        tools:layout="@layout/bloquear_desbloquear_puerta">
+
+        <!-->Puede ser que ocupen de argumentos para pasar de fragmento a fragmento, en la etiqueta argument de arriba se declara un argumento de tipo String que se llama
+        param1 <-->
+    </fragment>
+
+    <fragment
+        android:id="@+id/AnyadirCara"
+        android:name="com.fusufum.cerradurainteligente.AnyadirCaraFragmento"
+        android:label="Añadir una nueva persona"
+        tools:layout="@layout/anyadir_cara">
+
+        <!-->Más ejemplos de información que se envia entre los fragmentos <-->
+    </fragment>
+
+
+</navigation>

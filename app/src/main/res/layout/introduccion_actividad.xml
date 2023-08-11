@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-->Aqui está la otra parte de los elementos que conforman la introducción, sólo está el indicador de la parte inferior, el viewpager y el botón "Continuar" inferior<-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
+    android:orientation="vertical"
+    android:visibility="visible"
+    tools:context=".initial_steps.Introduction">
+
+    <me.relex.circleindicator.CircleIndicator3
+        android:id="@+id/indicador"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom"
+        android:background="@color/material_dynamic_primary30"
+        app:ci_height="10dp"
+        app:ci_margin="5dp"
+        app:ci_width="10dp" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/indicador"
+        android:layout_centerInParent="true"
+        android:background="?attr/colorSurface" />
+
+    <Button
+        android:id="@+id/boton_siguiente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="120dp"
+        android:backgroundTint="@color/material_dynamic_primary50"
+        android:text="Continuar"
+        android:textColor="@color/material_dynamic_primary99"
+        android:textColorHighlight="@color/material_dynamic_primary99"
+        android:textColorHint="@color/material_dynamic_primary20"
+        android:textColorLink="@color/material_dynamic_primary30"
+        tools:ignore="TextContrastCheck" />
+
+</RelativeLayout>

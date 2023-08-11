@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Cerradura Inteligente</string>
+    <string name="action_settings">Settings</string>
+
+
+    <string name="first_fragment_label">Menú principal</string>
+    <string name="unlock_fragment_label">La puerta está desbloqueada</string>
+    <string name="addnewface_fragment_label">Añadir nueva cara</string>
+
+    <string name="next">Siguiente</string>
+    <string name="previous">Anterior</string>
+    <string name="welcome">Te damos la bienvenida a la app de Cerradura Inteligente!</string>
+    <string name="welcome_l2">Configuremos tu bluetooth para que puedas controlar la cerradura</string>
+    <string name="presione_el_bot_n_para_desbloquear_la_puerta">Presione aquí para desbloquear la puerta</string>
+    <string name="la_puerta_deber_a_estar_desbloquerada">La puerta debería estar desbloqueada</string>
+    <string name="bloquear">Bloquear</string>
+    <string name="desbloquear">Desbloquear</string>
+
+    <string name="start">Comenzar</string>
+    <string name="whoareyou">¿Quién eres?</string>
+    <string name="addnewface">Añadir nueva cara</string>
+    <string name="deleteface">Eliminar caras</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

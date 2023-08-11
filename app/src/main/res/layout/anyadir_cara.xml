@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
+    tools:context=".AnyadirCaraFragmento">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/rounded_corners"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/First_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Instrucciones"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/Second_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Asegurese que su cara sea visible."
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/First_text"
+            app:layout_constraintTop_toBottomOf="@+id/First_text" />
+
+        <Button
+            android:id="@+id/aceptar_boton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/material_dynamic_primary50"
+            android:text="Añadir Cara"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/material_dynamic_primary100"
+            android:textColorHighlight="@color/material_dynamic_primary70"
+            android:textColorHint="@color/material_dynamic_primary10"
+            android:textColorLink="@color/material_dynamic_primary60"
+            app:icon="@drawable/dibujo_anyadircara"
+            app:iconTint="@color/material_dynamic_primary99"
+            app:layout_constraintTop_toBottomOf="@id/outsidecamaracontainer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:rippleColor="@color/material_dynamic_primary30" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TextFieldContainer"
+            style="?attr/textInputFilledStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Ingrese su nombre"
+            app:startIconDrawable="@drawable/persona_outline"
+            android:background="?attr/colorPrimaryContainer"
+            app:boxBackgroundColor="?attr/colorPrimaryContainer"
+            app:layout_constraintStart_toStartOf="@+id/First_text"
+            app:layout_constraintTop_toBottomOf="@+id/Second_text">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/TextField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/outsidecamaracontainer"
+            android:layout_width="174sp"
+            android:layout_height="350sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp"
+            android:foreground="@drawable/inverse_rounded_corners"
+            app:layout_constraintBottom_toTopOf="@+id/aceptar_boton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TextFieldContainer">
+
+            <androidx.camera.view.PreviewView
+                android:id="@+id/camaracontainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="0dp"
+                app:layout_constraintBottom_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
